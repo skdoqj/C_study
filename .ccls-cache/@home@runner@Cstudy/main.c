@@ -1,1 +1,7 @@
-// 커밋 테스트햣
+#include <stdio.h>
+
+int main() {
+
+  printf("%d\n", 1);
+  return 0;
+}
