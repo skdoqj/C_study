@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main_loop() {
   // for 정해진 횟수만큼 반복
   int j;
   int sum = 0;
@@ -24,6 +24,28 @@ int main() {
     i++;
   } while (i < 3);
   printf("sum = %d\n", i);
+
+  // continue 더이상 아래 문장을 실행하지 않고, 반복문의 처음으로 돌아감
+  for (i = 0; i < 3; i++) {
+    if (i == 1)
+      continue;
+    sum++;
+  }
+
+  // break 반복문을 빠져나감
+  for (i = 0; i < 3; i++) {
+    if (i == 1)
+      break;
+    ;
+    sum++;
+  }
+
+  // 다중 반복문
+  for (i = 0; i < 2; i++) {
+    for (j = 0; j < 2; j++) {
+      printf("i:%d, j:%d", i, j);
+    }
+  }
 
   return 0;
 }
